@@ -1,0 +1,20 @@
+# MyApp — FastAPI starter
+
+Features:
+- FastAPI app with JWT auth
+- SQLModel + SQLite
+- Docker + docker-compose
+- Tests (pytest)
+- GitHub Actions CI
+
+Quickstart (local):
+1. Copy `.env.example` → `.env` and set SECRET_KEY.
+2. Install: `poetry install`
+3. Run: `uvicorn app.main:app --reload`
+4. Endpoints:
+   - `POST /api/signup` {username,password}
+   - `POST /api/login` {username,password}
+   - `POST /api/items` (Bearer token) {title,content}
+   - `GET /api/items` (Bearer token)
+
+To run with Docker:
